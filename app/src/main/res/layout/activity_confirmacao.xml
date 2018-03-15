@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cmp1144.pucgoias.com.culturebooks.ConfirmacaoActivity">
+
+    <ListView
+        android:id="@+id/listaCarrinho"
+        android:layout_marginTop="5dp"
+        android:layout_width="350dp"
+        android:layout_height="260dp"
+        android:background="#60e7bc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textValorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Valor Total"
+        android:layout_below="@+id/listaCarrinho"
+        android:layout_alignLeft="@+id/listaCarrinho"
+        android:layout_alignStart="@+id/listaCarrinho" />
+
+    <EditText
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textValorTotal"
+        android:layout_alignStart="@+id/textValorTotal"
+        android:layout_below="@+id/textValorTotal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toStartOf="@+id/textView9"
+        android:layout_toLeftOf="@+id/textView9" />
+
+    <Spinner
+        android:id="@+id/spinnerBandeira"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/textView9"
+        android:layout_toRightOf="@+id/textValorTotal"
+        android:layout_alignBottom="@+id/textTotal" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerBandeira"
+        android:layout_alignStart="@+id/spinnerBandeira"
+        android:layout_alignTop="@+id/textValorTotal"
+        android:text="Bandeira do Cartão" />
+
+    <EditText
+        android:id="@+id/textValidade"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/textView14"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
+    <EditText
+        android:id="@+id/textNumeroCartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView9"
+        android:layout_alignLeft="@+id/textTotal"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignStart="@+id/textTotal"
+        android:layout_below="@+id/textTotal"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número do Cartão"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textTotal"
+        android:layout_alignLeft="@+id/textNumeroCartao"
+        android:layout_alignStart="@+id/textNumeroCartao" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CCV"
+        android:layout_below="@+id/spinnerBandeira"
+        android:layout_alignLeft="@+id/textCCV"
+        android:layout_alignStart="@+id/textCCV" />
+
+    <EditText
+        android:id="@+id/textCCV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_above="@+id/textNomeCompleto"
+        android:layout_toRightOf="@+id/textNomeCompleto"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_alignRight="@+id/listaCarrinho"
+        android:layout_alignEnd="@+id/listaCarrinho" />
+
+    <EditText
+        android:id="@+id/textNomeCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinnerBandeira"
+        android:layout_alignLeft="@+id/textNumeroCartao"
+        android:layout_alignRight="@+id/spinnerBandeira"
+        android:layout_alignStart="@+id/textNumeroCartao"
+        android:layout_below="@+id/textNumeroCartao"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textNumeroCartao"
+        android:layout_alignStart="@+id/textNumeroCartao"
+        android:layout_below="@+id/textNumeroCartao"
+        android:layout_marginTop="5dp"
+        android:text="Nome (como no Cartão)" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textValidade"
+        android:layout_alignLeft="@+id/textValidade"
+        android:layout_alignStart="@+id/textValidade"
+        android:text="Validade(mês/ano)" />
+
+    <Button
+        android:id="@+id/btnSelecionarData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sel. Data"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/textValidade"
+        android:layout_toRightOf="@+id/textValidade"
+        android:layout_toEndOf="@+id/textValidade" />
+
+    <Button
+        android:id="@+id/btnConfirmarPagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textValidade"
+        android:layout_alignStart="@+id/textValidade"
+        android:layout_alignTop="@+id/textView15"
+        android:text="Confirmar Pagamento" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textNomeCompleto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Voltar" />
+
+</android.widget.RelativeLayout>

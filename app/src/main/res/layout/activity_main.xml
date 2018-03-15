@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cmp1144.pucgoias.com.culturebooks.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="53dp"
+        app:srcCompat="@drawable/login222"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="Usuário"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/textUsuario"
+        android:layout_alignStart="@+id/textUsuario" />
+
+    <EditText
+        android:id="@+id/textUsuario"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textUsuario"
+        android:layout_alignStart="@+id/textUsuario"
+        android:layout_below="@+id/textUsuario"
+        android:layout_marginTop="32dp"
+        android:text="Senha" />
+
+    <EditText
+        android:id="@+id/textSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textUsuario"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textUsuario"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/esqueciSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textSenha"
+        android:layout_alignEnd="@+id/textSenha"
+        android:layout_alignRight="@+id/textSenha"
+        android:text="@string/esqueci_senha"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic" />
+</android.widget.RelativeLayout>

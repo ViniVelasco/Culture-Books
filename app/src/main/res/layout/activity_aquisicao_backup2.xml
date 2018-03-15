@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:windowSoftInputMode="adjustNothing"
+    android:layout_height="match_parent"
+    tools:context="cmp1144.pucgoias.com.culturebooks.AquisicaoActivity">
+
+    <TextView
+        android:id="@+id/identificacaoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:text="Identificação do Usuário"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Produtos"
+        android:layout_below="@+id/identificacaoUsuario"
+        android:layout_alignLeft="@+id/identificacaoUsuario"
+        android:layout_alignStart="@+id/identificacaoUsuario" />
+
+    <ListView
+        android:layout_width="250dp"
+        android:layout_height="205dp"
+        android:background="#60e7bc"
+        android:id="@+id/listCarrinho"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textQuantidade"
+        android:layout_alignStart="@+id/textQuantidade"
+        android:layout_alignRight="@+id/spinnerProdutos"
+        android:layout_alignEnd="@+id/spinnerProdutos" />
+
+    <EditText
+        android:id="@+id/textQuantidade"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        android:layout_below="@+id/imageProduto"
+        android:layout_alignLeft="@+id/imageProduto"
+        android:layout_alignStart="@+id/imageProduto"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Unitário"
+        android:layout_above="@+id/textQuantidade"
+        android:layout_alignRight="@+id/textValorUnitario"
+        android:layout_alignEnd="@+id/textValorUnitario" />
+
+    <EditText
+        android:id="@+id/textValorUnitario"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/textView8"
+        android:layout_toRightOf="@+id/textQuantidade"
+        android:layout_toEndOf="@+id/textQuantidade" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total do Item"
+        android:layout_above="@+id/textValorUnitario"
+        android:layout_alignLeft="@+id/textValorTotalItem"
+        android:layout_alignStart="@+id/textValorTotalItem" />
+
+    <EditText
+        android:id="@+id/textValorTotalItem"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_alignBaseline="@+id/textValorUnitario"
+        android:layout_alignBottom="@+id/textValorUnitario"
+        android:layout_toLeftOf="@+id/textTotalCompra"
+        android:layout_toStartOf="@+id/textTotalCompra" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total"
+
+        android:layout_above="@+id/textValorTotalItem"
+        android:layout_toRightOf="@+id/textValorTotalItem"
+        android:layout_toEndOf="@+id/textValorTotalItem" />
+
+    <Button
+        android:id="@+id/btnComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#67f05b"
+        android:text="Comprar"
+        android:layout_above="@+id/btnFinalizarCompra"
+        android:layout_alignLeft="@+id/btnFinalizarCompra"
+        android:layout_alignStart="@+id/btnFinalizarCompra"
+        android:layout_alignRight="@+id/btnFinalizarCompra"
+        android:layout_alignEnd="@+id/btnFinalizarCompra" />
+
+    <Button
+        android:id="@+id/btnFinalizarCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalizar Compra"
+        android:layout_alignBottom="@+id/imageProduto"
+        android:layout_alignRight="@+id/spinnerProdutos"
+        android:layout_alignEnd="@+id/spinnerProdutos" />
+
+    <ImageView
+        android:id="@+id/imageProduto"
+        android:layout_width="135dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/iconbook"
+        android:paddingBottom="2dp"
+        android:layout_below="@+id/spinnerProdutos"
+        android:layout_alignLeft="@+id/spinnerProdutos"
+        android:layout_alignStart="@+id/spinnerProdutos" />
+
+    <Spinner
+        android:id="@+id/spinnerProdutos"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:background="#60e7bc"
+        android:layout_below="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/textTotalCompra"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignBaseline="@+id/textValorTotalItem"
+        android:layout_alignBottom="@+id/textValorTotalItem"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listCarrinho"
+        android:layout_alignStart="@+id/listCarrinho"
+        android:layout_below="@+id/textQuantidade"
+        android:layout_marginTop="5dp"
+        android:text="Carrinho" />
+</android.widget.RelativeLayout>
